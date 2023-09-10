@@ -19,6 +19,7 @@
 		CE1CCA4A2AAE12AF0020BCD4 /* RenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA492AAE12AF0020BCD4 /* RenderPass.swift */; };
 		CE1CCA4C2AAE134E0020BCD4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA4B2AAE134E0020BCD4 /* GameScene.swift */; };
 		CE1CCA512AAE18C60020BCD4 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA502AAE18C60020BCD4 /* Renderer.swift */; };
+		CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA542AAE22540020BCD4 /* TextureController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CE1CCA4E2AAE14170020BCD4 /* stdbool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stdbool.h; sourceTree = "<group>"; };
 		CE1CCA4F2AAE14600020BCD4 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CE1CCA502AAE18C60020BCD4 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		CE1CCA542AAE22540020BCD4 /* TextureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,8 @@
 		CE1CCA282AADF0EC0020BCD4 /* MetalGameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				CE1CCA532AAE22490020BCD4 /* Resources */,
+				CE1CCA522AAE22340020BCD4 /* Textures */,
 				CE1CCA4D2AAE13D60020BCD4 /* Shaders */,
 				CE1CCA482AAE12950020BCD4 /* Render Passes */,
 				CE1CCA462AAE12410020BCD4 /* Geometry */,
@@ -161,6 +165,21 @@
 			path = Shaders;
 			sourceTree = "<group>";
 		};
+		CE1CCA522AAE22340020BCD4 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				CE1CCA542AAE22540020BCD4 /* TextureController.swift */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		CE1CCA532AAE22490020BCD4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +252,7 @@
 			files = (
 				CE1CCA422AAE018E0020BCD4 /* InputController.swift in Sources */,
 				CE1CCA3C2AADF4640020BCD4 /* Options.swift in Sources */,
+				CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */,
 				CE1CCA4A2AAE12AF0020BCD4 /* RenderPass.swift in Sources */,
 				CE1CCA4C2AAE134E0020BCD4 /* GameScene.swift in Sources */,
 				CE1CCA3F2AADF6430020BCD4 /* GameController.swift in Sources */,
