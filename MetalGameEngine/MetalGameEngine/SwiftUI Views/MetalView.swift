@@ -20,16 +20,13 @@ struct MetalView: View {
               InputController.shared.touchDelta = CGSize(width: value.translation.width - previousTranslation.width,
                                                          height: value.translation.height - previousTranslation.height)
               previousTranslation = value.translation
-              print("touched")
               // if user drags, cancel the tap touch
               if abs(value.translation.width) > 1 ||
                   abs(value.translation.height) > 1 {
-                print("draging")
                 InputController.shared.touchLocation = nil
               }
             }
             .onEnded { _ in
-              print("end touching/dragging")
               previousTranslation = .zero
             })
           .gesture(MagnificationGesture()
@@ -38,11 +35,9 @@ struct MetalView: View {
               let scroll = value - previousScroll
               InputController.shared.mouseScroll.x = Float(scroll) * Settings.touchZoomSensitivity
               previousScroll = value
-              print("zooming")
             }
             .onEnded { _ in
               previousScroll = 1
-              print("end zooming")
             })
       }
     }

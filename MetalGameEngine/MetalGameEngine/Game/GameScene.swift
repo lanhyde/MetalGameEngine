@@ -1,0 +1,5 @@
+import MetalKit
+
+struct GameScene {
+  
+}
