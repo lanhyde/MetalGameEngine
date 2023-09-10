@@ -15,6 +15,7 @@
 		CE1CCA3C2AADF4640020BCD4 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA3B2AADF4640020BCD4 /* Options.swift */; };
 		CE1CCA3F2AADF6430020BCD4 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA3E2AADF6430020BCD4 /* GameController.swift */; };
 		CE1CCA422AAE018E0020BCD4 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA412AAE018E0020BCD4 /* InputController.swift */; };
+		CE1CCA442AAE0AC40020BCD4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA432AAE0AC40020BCD4 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CE1CCA3B2AADF4640020BCD4 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		CE1CCA3E2AADF6430020BCD4 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		CE1CCA412AAE018E0020BCD4 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
+		CE1CCA432AAE0AC40020BCD4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1CCA412AAE018E0020BCD4 /* InputController.swift */,
+				CE1CCA432AAE0AC40020BCD4 /* Settings.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				CE1CCA3C2AADF4640020BCD4 /* Options.swift in Sources */,
 				CE1CCA3F2AADF6430020BCD4 /* GameController.swift in Sources */,
 				CE1CCA3A2AADF3600020BCD4 /* MetalView.swift in Sources */,
+				CE1CCA442AAE0AC40020BCD4 /* Settings.swift in Sources */,
 				CE1CCA2C2AADF0EC0020BCD4 /* ContentView.swift in Sources */,
 				CE1CCA2A2AADF0EC0020BCD4 /* MetalGameEngineApp.swift in Sources */,
 			);
