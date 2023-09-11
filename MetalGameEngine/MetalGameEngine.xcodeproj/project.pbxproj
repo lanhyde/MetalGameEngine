@@ -10,6 +10,11 @@
 		CE0E12652AAF3A9C00FFBDD2 /* MathUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E12642AAF3A9C00FFBDD2 /* MathUtility.swift */; };
 		CE0E12672AAF4CC300FFBDD2 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E12662AAF4CC300FFBDD2 /* Mesh.swift */; };
 		CE0E12692AAF535400FFBDD2 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E12682AAF535400FFBDD2 /* Transform.swift */; };
+		CE0E126B2AAF56D000FFBDD2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E126A2AAF56D000FFBDD2 /* Camera.swift */; };
+		CE0E126D2AAF585C00FFBDD2 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E126C2AAF585C00FFBDD2 /* Movement.swift */; };
+		CE0E126F2AAF5B7000FFBDD2 /* FPCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E126E2AAF5B7000FFBDD2 /* FPCamera.swift */; };
+		CE0E12712AAF5B8D00FFBDD2 /* ArcballCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E12702AAF5B8D00FFBDD2 /* ArcballCamera.swift */; };
+		CE0E12732AAF65AB00FFBDD2 /* OrthographicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E12722AAF65AB00FFBDD2 /* OrthographicCamera.swift */; };
 		CE1CCA2A2AADF0EC0020BCD4 /* MetalGameEngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA292AADF0EC0020BCD4 /* MetalGameEngineApp.swift */; };
 		CE1CCA2C2AADF0EC0020BCD4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA2B2AADF0EC0020BCD4 /* ContentView.swift */; };
 		CE1CCA2E2AADF0EE0020BCD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1CCA2D2AADF0EE0020BCD4 /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 		CE0E12642AAF3A9C00FFBDD2 /* MathUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtility.swift; sourceTree = "<group>"; };
 		CE0E12662AAF4CC300FFBDD2 /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
 		CE0E12682AAF535400FFBDD2 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
+		CE0E126A2AAF56D000FFBDD2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		CE0E126C2AAF585C00FFBDD2 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
+		CE0E126E2AAF5B7000FFBDD2 /* FPCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPCamera.swift; sourceTree = "<group>"; };
+		CE0E12702AAF5B8D00FFBDD2 /* ArcballCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcballCamera.swift; sourceTree = "<group>"; };
+		CE0E12722AAF65AB00FFBDD2 /* OrthographicCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthographicCamera.swift; sourceTree = "<group>"; };
 		CE1CCA262AADF0EC0020BCD4 /* MetalGameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalGameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1CCA292AADF0EC0020BCD4 /* MetalGameEngineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalGameEngineApp.swift; sourceTree = "<group>"; };
 		CE1CCA2B2AADF0EC0020BCD4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 			children = (
 				CE1CCA412AAE018E0020BCD4 /* InputController.swift */,
 				CE1CCA432AAE0AC40020BCD4 /* Settings.swift */,
+				CE0E126C2AAF585C00FFBDD2 /* Movement.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -159,6 +170,10 @@
 		CE1CCA472AAE127C0020BCD4 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E126A2AAF56D000FFBDD2 /* Camera.swift */,
+				CE0E126E2AAF5B7000FFBDD2 /* FPCamera.swift */,
+				CE0E12702AAF5B8D00FFBDD2 /* ArcballCamera.swift */,
+				CE0E12722AAF65AB00FFBDD2 /* OrthographicCamera.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -267,6 +282,9 @@
 			files = (
 				CE1CCA422AAE018E0020BCD4 /* InputController.swift in Sources */,
 				CE1CCA3C2AADF4640020BCD4 /* Options.swift in Sources */,
+				CE0E126F2AAF5B7000FFBDD2 /* FPCamera.swift in Sources */,
+				CE0E126D2AAF585C00FFBDD2 /* Movement.swift in Sources */,
+				CE0E126B2AAF56D000FFBDD2 /* Camera.swift in Sources */,
 				CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */,
 				CE1CCA4A2AAE12AF0020BCD4 /* RenderPass.swift in Sources */,
 				CEC235E82AAEA3230016923C /* VertexDescriptor.swift in Sources */,
@@ -278,6 +296,8 @@
 				CE0E12672AAF4CC300FFBDD2 /* Mesh.swift in Sources */,
 				CEC235E62AAE908C0016923C /* Submesh.swift in Sources */,
 				CE1CCA442AAE0AC40020BCD4 /* Settings.swift in Sources */,
+				CE0E12732AAF65AB00FFBDD2 /* OrthographicCamera.swift in Sources */,
+				CE0E12712AAF5B8D00FFBDD2 /* ArcballCamera.swift in Sources */,
 				CE1CCA2C2AADF0EC0020BCD4 /* ContentView.swift in Sources */,
 				CE1CCA512AAE18C60020BCD4 /* Renderer.swift in Sources */,
 				CE1CCA2A2AADF0EC0020BCD4 /* MetalGameEngineApp.swift in Sources */,

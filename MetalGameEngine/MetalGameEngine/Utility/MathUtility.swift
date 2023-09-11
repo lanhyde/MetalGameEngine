@@ -12,6 +12,10 @@ extension Float {
   var degreesToRadians: Float {
     (self / 180) * Self.pi
   }
+  
+  func clamp(lowerBound: Float, upperBound: Float) -> Float {
+    min(max(self, lowerBound), upperBound)
+  }
 }
 
 extension float4x4 {
@@ -178,3 +182,4 @@ extension float4 {
     self = [Float(d.x), Float(d.y), Float(d.z), Float(d.w)]
   }
 }
+
