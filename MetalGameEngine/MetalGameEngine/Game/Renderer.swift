@@ -37,4 +37,8 @@ extension Renderer {
     params.width = UInt32(size.width)
     params.height = UInt32(size.height)
   }
+  
+  func updateUniforms(scene: GameScene) {
+    
+  }
 }

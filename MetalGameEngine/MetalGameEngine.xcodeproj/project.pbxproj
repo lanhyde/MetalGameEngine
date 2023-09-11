@@ -20,6 +20,8 @@
 		CE1CCA4C2AAE134E0020BCD4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA4B2AAE134E0020BCD4 /* GameScene.swift */; };
 		CE1CCA512AAE18C60020BCD4 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA502AAE18C60020BCD4 /* Renderer.swift */; };
 		CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA542AAE22540020BCD4 /* TextureController.swift */; };
+		CEC235E62AAE908C0016923C /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC235E52AAE908C0016923C /* Submesh.swift */; };
+		CEC235E82AAEA3230016923C /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC235E72AAEA3230016923C /* VertexDescriptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		CE1CCA4F2AAE14600020BCD4 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CE1CCA502AAE18C60020BCD4 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		CE1CCA542AAE22540020BCD4 /* TextureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureController.swift; sourceTree = "<group>"; };
+		CEC235E52AAE908C0016923C /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
+		CEC235E72AAEA3230016923C /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 		CE1CCA462AAE12410020BCD4 /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				CEC235E52AAE908C0016923C /* Submesh.swift */,
+				CEC235E72AAEA3230016923C /* VertexDescriptor.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -254,9 +260,11 @@
 				CE1CCA3C2AADF4640020BCD4 /* Options.swift in Sources */,
 				CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */,
 				CE1CCA4A2AAE12AF0020BCD4 /* RenderPass.swift in Sources */,
+				CEC235E82AAEA3230016923C /* VertexDescriptor.swift in Sources */,
 				CE1CCA4C2AAE134E0020BCD4 /* GameScene.swift in Sources */,
 				CE1CCA3F2AADF6430020BCD4 /* GameController.swift in Sources */,
 				CE1CCA3A2AADF3600020BCD4 /* MetalView.swift in Sources */,
+				CEC235E62AAE908C0016923C /* Submesh.swift in Sources */,
 				CE1CCA442AAE0AC40020BCD4 /* Settings.swift in Sources */,
 				CE1CCA2C2AADF0EC0020BCD4 /* ContentView.swift in Sources */,
 				CE1CCA512AAE18C60020BCD4 /* Renderer.swift in Sources */,
