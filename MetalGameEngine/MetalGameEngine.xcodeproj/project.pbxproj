@@ -28,6 +28,7 @@
 		CE1CCA4C2AAE134E0020BCD4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA4B2AAE134E0020BCD4 /* GameScene.swift */; };
 		CE1CCA512AAE18C60020BCD4 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA502AAE18C60020BCD4 /* Renderer.swift */; };
 		CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA542AAE22540020BCD4 /* TextureController.swift */; };
+		CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A542AB0A43000BB40B8 /* Pipelines.swift */; };
 		CEC235E62AAE908C0016923C /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC235E52AAE908C0016923C /* Submesh.swift */; };
 		CEC235E82AAEA3230016923C /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC235E72AAEA3230016923C /* VertexDescriptor.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		CE1CCA4F2AAE14600020BCD4 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CE1CCA502AAE18C60020BCD4 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		CE1CCA542AAE22540020BCD4 /* TextureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureController.swift; sourceTree = "<group>"; };
+		CE959A542AB0A43000BB40B8 /* Pipelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipelines.swift; sourceTree = "<group>"; };
 		CEC235E52AAE908C0016923C /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		CEC235E72AAEA3230016923C /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1CCA492AAE12AF0020BCD4 /* RenderPass.swift */,
+				CE959A542AB0A43000BB40B8 /* Pipelines.swift */,
 			);
 			path = "Render Passes";
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				CE1CCA4C2AAE134E0020BCD4 /* GameScene.swift in Sources */,
 				CE0E12692AAF535400FFBDD2 /* Transform.swift in Sources */,
 				CE0E12652AAF3A9C00FFBDD2 /* MathUtility.swift in Sources */,
+				CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */,
 				CE1CCA3F2AADF6430020BCD4 /* GameController.swift in Sources */,
 				CE1CCA3A2AADF3600020BCD4 /* MetalView.swift in Sources */,
 				CE0E12672AAF4CC300FFBDD2 /* Mesh.swift in Sources */,
