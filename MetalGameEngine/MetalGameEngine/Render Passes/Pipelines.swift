@@ -1,6 +1,6 @@
 import MetalKit
 
-enum PinelineState {
+enum PipelineStates {
   static func createPSO(descriptor: MTLRenderPipelineDescriptor) -> MTLRenderPipelineState {
     let pipelineState: MTLRenderPipelineState
     do {

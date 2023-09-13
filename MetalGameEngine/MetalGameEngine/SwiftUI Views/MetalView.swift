@@ -11,7 +11,7 @@ struct MetalView: View {
       VStack {
         MetalViewRepresentable(gameController: gameController, metalView: $metalView, options: options)
           .onAppear {
-            gameController = GameController(options: options)
+            gameController = GameController(metalView: metalView, options: options)
           }
           .gesture(DragGesture(minimumDistance: 0)
             .onChanged {

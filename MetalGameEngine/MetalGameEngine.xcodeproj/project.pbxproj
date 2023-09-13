@@ -28,7 +28,21 @@
 		CE1CCA4C2AAE134E0020BCD4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA4B2AAE134E0020BCD4 /* GameScene.swift */; };
 		CE1CCA512AAE18C60020BCD4 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA502AAE18C60020BCD4 /* Renderer.swift */; };
 		CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCA542AAE22540020BCD4 /* TextureController.swift */; };
+		CE3F07072AB158BB00318C26 /* ShadowCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F07062AB158BB00318C26 /* ShadowCamera.swift */; };
+		CE3F07092AB1F2CB00318C26 /* ForwardRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F07082AB1F2CB00318C26 /* ForwardRenderPass.swift */; };
+		CE3F070B2AB1F57100318C26 /* SceneLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F070A2AB1F57100318C26 /* SceneLighting.swift */; };
+		CE3F070D2AB1F7B700318C26 /* Skybox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F070C2AB1F7B700318C26 /* Skybox.swift */; };
+		CE3F07102AB1FC5300318C26 /* BRDF.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE3F070F2AB1FC5300318C26 /* BRDF.metal */; };
+		CE3F07122AB1FC9400318C26 /* RendererBRDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F07112AB1FC9400318C26 /* RendererBRDF.swift */; };
+		CE3F07142AB2085C00318C26 /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3F07132AB2085C00318C26 /* Textures.xcassets */; };
+		CE3F07162AB2089000318C26 /* irradiance.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3F07152AB2088800318C26 /* irradiance.png */; };
+		CE3F07182AB2097100318C26 /* Skybox.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE3F07172AB2097100318C26 /* Skybox.metal */; };
+		CE3F071A2AB20BA400318C26 /* IBL.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE3F07192AB20BA400318C26 /* IBL.metal */; };
+		CE3F071D2AB20D5E00318C26 /* Lighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE3F071C2AB20D5E00318C26 /* Lighting.metal */; };
+		CE3F07202AB2133800318C26 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE3F071F2AB2133800318C26 /* Shaders.metal */; };
 		CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A542AB0A43000BB40B8 /* Pipelines.swift */; };
+		CE959A572AB0AFE300BB40B8 /* PlayerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */; };
+		CE959A592AB0B1EA00BB40B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A582AB0B1EA00BB40B8 /* Model.swift */; };
 		CEC235E62AAE908C0016923C /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC235E52AAE908C0016923C /* Submesh.swift */; };
 		CEC235E82AAEA3230016923C /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC235E72AAEA3230016923C /* VertexDescriptor.swift */; };
 /* End PBXBuildFile section */
@@ -59,7 +73,23 @@
 		CE1CCA4F2AAE14600020BCD4 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CE1CCA502AAE18C60020BCD4 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		CE1CCA542AAE22540020BCD4 /* TextureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureController.swift; sourceTree = "<group>"; };
+		CE3F07062AB158BB00318C26 /* ShadowCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCamera.swift; sourceTree = "<group>"; };
+		CE3F07082AB1F2CB00318C26 /* ForwardRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardRenderPass.swift; sourceTree = "<group>"; };
+		CE3F070A2AB1F57100318C26 /* SceneLighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLighting.swift; sourceTree = "<group>"; };
+		CE3F070C2AB1F7B700318C26 /* Skybox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skybox.swift; sourceTree = "<group>"; };
+		CE3F070F2AB1FC5300318C26 /* BRDF.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BRDF.metal; sourceTree = "<group>"; };
+		CE3F07112AB1FC9400318C26 /* RendererBRDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererBRDF.swift; sourceTree = "<group>"; };
+		CE3F07132AB2085C00318C26 /* Textures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Textures.xcassets; sourceTree = "<group>"; };
+		CE3F07152AB2088800318C26 /* irradiance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = irradiance.png; sourceTree = "<group>"; };
+		CE3F07172AB2097100318C26 /* Skybox.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Skybox.metal; sourceTree = "<group>"; };
+		CE3F07192AB20BA400318C26 /* IBL.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = IBL.metal; sourceTree = "<group>"; };
+		CE3F071B2AB20BFC00318C26 /* Lighting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lighting.h; sourceTree = "<group>"; };
+		CE3F071C2AB20D5E00318C26 /* Lighting.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Lighting.metal; sourceTree = "<group>"; };
+		CE3F071E2AB211D600318C26 /* Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		CE3F071F2AB2133800318C26 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		CE959A542AB0A43000BB40B8 /* Pipelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipelines.swift; sourceTree = "<group>"; };
+		CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCamera.swift; sourceTree = "<group>"; };
+		CE959A582AB0B1EA00BB40B8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CEC235E52AAE908C0016923C /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		CEC235E72AAEA3230016923C /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +166,8 @@
 				CE1CCA3E2AADF6430020BCD4 /* GameController.swift */,
 				CE1CCA4B2AAE134E0020BCD4 /* GameScene.swift */,
 				CE1CCA502AAE18C60020BCD4 /* Renderer.swift */,
+				CE3F07062AB158BB00318C26 /* ShadowCamera.swift */,
+				CE3F070A2AB1F57100318C26 /* SceneLighting.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -153,6 +185,7 @@
 		CE1CCA452AAE11AE0020BCD4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				CE3F070E2AB1FC0E00318C26 /* BRDF */,
 				CE0E12642AAF3A9C00FFBDD2 /* MathUtility.swift */,
 			);
 			path = Utility;
@@ -165,6 +198,7 @@
 				CEC235E72AAEA3230016923C /* VertexDescriptor.swift */,
 				CE0E12662AAF4CC300FFBDD2 /* Mesh.swift */,
 				CE0E12682AAF535400FFBDD2 /* Transform.swift */,
+				CE959A582AB0B1EA00BB40B8 /* Model.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -176,6 +210,7 @@
 				CE0E126E2AAF5B7000FFBDD2 /* FPCamera.swift */,
 				CE0E12702AAF5B8D00FFBDD2 /* ArcballCamera.swift */,
 				CE0E12722AAF65AB00FFBDD2 /* OrthographicCamera.swift */,
+				CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -185,6 +220,8 @@
 			children = (
 				CE1CCA492AAE12AF0020BCD4 /* RenderPass.swift */,
 				CE959A542AB0A43000BB40B8 /* Pipelines.swift */,
+				CE3F07082AB1F2CB00318C26 /* ForwardRenderPass.swift */,
+				CE3F070C2AB1F7B700318C26 /* Skybox.swift */,
 			);
 			path = "Render Passes";
 			sourceTree = "<group>";
@@ -194,6 +231,12 @@
 			children = (
 				CE1CCA4E2AAE14170020BCD4 /* stdbool.h */,
 				CE1CCA4F2AAE14600020BCD4 /* Common.h */,
+				CE3F07172AB2097100318C26 /* Skybox.metal */,
+				CE3F07192AB20BA400318C26 /* IBL.metal */,
+				CE3F071B2AB20BFC00318C26 /* Lighting.h */,
+				CE3F071C2AB20D5E00318C26 /* Lighting.metal */,
+				CE3F071E2AB211D600318C26 /* Vertex.h */,
+				CE3F071F2AB2133800318C26 /* Shaders.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -209,8 +252,19 @@
 		CE1CCA532AAE22490020BCD4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE3F07152AB2088800318C26 /* irradiance.png */,
+				CE3F07132AB2085C00318C26 /* Textures.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE3F070E2AB1FC0E00318C26 /* BRDF */ = {
+			isa = PBXGroup;
+			children = (
+				CE3F070F2AB1FC5300318C26 /* BRDF.metal */,
+				CE3F07112AB1FC9400318C26 /* RendererBRDF.swift */,
+			);
+			path = BRDF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +325,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3F07142AB2085C00318C26 /* Textures.xcassets in Resources */,
 				CE1CCA322AADF0EE0020BCD4 /* Preview Assets.xcassets in Resources */,
 				CE1CCA2E2AADF0EE0020BCD4 /* Assets.xcassets in Resources */,
+				CE3F07162AB2089000318C26 /* irradiance.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,19 +340,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1CCA422AAE018E0020BCD4 /* InputController.swift in Sources */,
+				CE3F071A2AB20BA400318C26 /* IBL.metal in Sources */,
 				CE1CCA3C2AADF4640020BCD4 /* Options.swift in Sources */,
+				CE3F07092AB1F2CB00318C26 /* ForwardRenderPass.swift in Sources */,
+				CE3F07202AB2133800318C26 /* Shaders.metal in Sources */,
 				CE0E126F2AAF5B7000FFBDD2 /* FPCamera.swift in Sources */,
 				CE0E126D2AAF585C00FFBDD2 /* Movement.swift in Sources */,
+				CE3F07182AB2097100318C26 /* Skybox.metal in Sources */,
 				CE0E126B2AAF56D000FFBDD2 /* Camera.swift in Sources */,
 				CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */,
+				CE3F071D2AB20D5E00318C26 /* Lighting.metal in Sources */,
 				CE1CCA4A2AAE12AF0020BCD4 /* RenderPass.swift in Sources */,
 				CEC235E82AAEA3230016923C /* VertexDescriptor.swift in Sources */,
+				CE3F07072AB158BB00318C26 /* ShadowCamera.swift in Sources */,
 				CE1CCA4C2AAE134E0020BCD4 /* GameScene.swift in Sources */,
+				CE3F070D2AB1F7B700318C26 /* Skybox.swift in Sources */,
+				CE3F07102AB1FC5300318C26 /* BRDF.metal in Sources */,
 				CE0E12692AAF535400FFBDD2 /* Transform.swift in Sources */,
 				CE0E12652AAF3A9C00FFBDD2 /* MathUtility.swift in Sources */,
+				CE3F070B2AB1F57100318C26 /* SceneLighting.swift in Sources */,
 				CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */,
 				CE1CCA3F2AADF6430020BCD4 /* GameController.swift in Sources */,
 				CE1CCA3A2AADF3600020BCD4 /* MetalView.swift in Sources */,
+				CE959A572AB0AFE300BB40B8 /* PlayerCamera.swift in Sources */,
+				CE959A592AB0B1EA00BB40B8 /* Model.swift in Sources */,
 				CE0E12672AAF4CC300FFBDD2 /* Mesh.swift in Sources */,
 				CEC235E62AAE908C0016923C /* Submesh.swift in Sources */,
 				CE1CCA442AAE0AC40020BCD4 /* Settings.swift in Sources */,
@@ -304,6 +371,7 @@
 				CE0E12712AAF5B8D00FFBDD2 /* ArcballCamera.swift in Sources */,
 				CE1CCA2C2AADF0EC0020BCD4 /* ContentView.swift in Sources */,
 				CE1CCA512AAE18C60020BCD4 /* Renderer.swift in Sources */,
+				CE3F07122AB1FC9400318C26 /* RendererBRDF.swift in Sources */,
 				CE1CCA2A2AADF0EC0020BCD4 /* MetalGameEngineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +513,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -483,7 +551,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
