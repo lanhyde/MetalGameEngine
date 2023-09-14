@@ -9,14 +9,24 @@ struct GameScene {
   var lighting = SceneLighting()
   let skybox: Skybox?
   var terrain: Terrain?
+  var cottage: Model
+  var water: Water?
   
   init() {
     skybox = Skybox(textureName: "sky")
-    camera.transform = defaultView
+    water = Water()
     
     terrain = Terrain(name: "terrain.obj")
     terrain?.tiling = 12
     terrain?.position = [0, 3, 0]
+    cottage = Model(name: "house.obj")
+    
+    camera.transform = defaultView
+    
+    water?.position = [0, -1, 0]
+    cottage.position = [0, 0.4, 10]
+    cottage.rotation.y = 0.2
+    models = [cottage]
   }
   
   mutating func update(size: CGSize) {
@@ -24,6 +34,7 @@ struct GameScene {
   }
   
   mutating func update(deltaTime: Float) {
+    water?.update(deltaTime: deltaTime)
     let input = InputController.shared
     
     if input.keysPressed.contains(.one) {

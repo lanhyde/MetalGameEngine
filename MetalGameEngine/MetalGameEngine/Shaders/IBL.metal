@@ -95,4 +95,3 @@ fragment float4 fragment_IBL(
   color *= material.ambientOcclusion;
   return color;
 }
-
