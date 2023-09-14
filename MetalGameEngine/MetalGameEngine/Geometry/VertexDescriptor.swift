@@ -27,7 +27,7 @@ extension MDLVertexDescriptor {
     vertexDescriptor.layouts[TangentBuffer.index] = MDLVertexBufferLayout(stride: MemoryLayout<float3>.stride)
     // Bitangent
     vertexDescriptor.attributes[Bitangent.index] = MDLVertexAttribute(name: MDLVertexAttributeBitangent, format: .float3, offset: 0, bufferIndex: BitangentBuffer.index)
-    vertexDescriptor.layouts[Bitangent.index] = MDLVertexBufferLayout(stride: MemoryLayout<float3>.stride)
+    vertexDescriptor.layouts[BitangentBuffer.index] = MDLVertexBufferLayout(stride: MemoryLayout<float3>.stride)
     
     return vertexDescriptor
   }()
