@@ -14,7 +14,7 @@ vertex VertexOut vertex_main(const VertexIn in [[stage_in]], constant Uniforms& 
     .worldNormal = uniforms.normalMatrix * in.normal,
     .worldTangent = uniforms.normalMatrix * in.tangent,
     .worldBitangent = uniforms.normalMatrix * in.bitangent,
-    .shadowPosition = uniforms.shadowProjectionMatrix * uniforms.shadowMatrixMatrix * uniforms.modelMatrix * in.position
+    .shadowPosition = uniforms.shadowProjectionMatrix * uniforms.shadowViewMatrix * uniforms.modelMatrix * in.position
   };
   
   out.clip_distance[0] = dot(uniforms.modelMatrix * in.position, uniforms.clipPlane);

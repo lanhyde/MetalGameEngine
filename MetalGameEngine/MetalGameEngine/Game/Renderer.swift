@@ -11,6 +11,7 @@ class Renderer: NSObject {
   var params = Params()
   
   var forwardRenderPass: ForwardRenderPass
+  var shadowCamera = OrthographicCamera()
   
   init(metalView: MTKView, options: Options) {
     guard let device = MTLCreateSystemDefaultDevice(),
@@ -42,10 +43,27 @@ extension Renderer {
   }
   
   func updateUniforms(scene: GameScene) {
+    params.alphaBlending = options.alphaBlending
     
+    uniforms.viewMatrix = scene.camera.viewMatrix
+    uniforms.projectionMatrix = scene.camera.projectionMatrix
+    params.lightCount = UInt32(scene.lighting.lights.count)
+    params.cameraPosition = scene.camera.position
+    let sun = scene.lighting.lights[0]
+    shadowCamera = OrthographicCamera.createShadowCamera(using: scene.camera, lightPosition: sun.position)
+    uniforms.shadowProjectionMatrix = shadowCamera.projectionMatrix
+    uniforms.shadowViewMatrix = float4x4(eye: shadowCamera.position, center: shadowCamera.center, up: [0, 1, 0])
   }
   
   func draw(scene: GameScene, in view: MTKView) {
+    guard let commandBuffer = Renderer.commandQueue.makeCommandBuffer(),
+          let descriptor = view.currentRenderPassDescriptor else { return }
+    updateUniforms(scene: scene)
     
+    forwardRenderPass.descriptor = descriptor
+    forwardRenderPass.draw(commandBuffer: commandBuffer, scene: scene, uniforms: uniforms, params: params)
+    guard let drawable = view.currentDrawable else { return }
+    commandBuffer.present(drawable)
+    commandBuffer.commit()
   }
 }
