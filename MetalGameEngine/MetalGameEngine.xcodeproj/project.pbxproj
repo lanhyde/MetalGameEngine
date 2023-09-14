@@ -49,6 +49,8 @@
 		CECC47322AB2A4DF003942A0 /* terrain.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CECC472B2AB2A4D3003942A0 /* terrain.mtl */; };
 		CECC47332AB2A4F0003942A0 /* house.obj in Resources */ = {isa = PBXBuildFile; fileRef = CECC472E2AB2A4D3003942A0 /* house.obj */; };
 		CECC47342AB2A4F4003942A0 /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CECC472F2AB2A4D3003942A0 /* house.mtl */; };
+		CECC47362AB2B10B003942A0 /* Terrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC47352AB2B10B003942A0 /* Terrain.swift */; };
+		CECC47382AB2B19B003942A0 /* Terrain.metal in Sources */ = {isa = PBXBuildFile; fileRef = CECC47372AB2B19B003942A0 /* Terrain.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		CECC472E2AB2A4D3003942A0 /* house.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = house.obj; sourceTree = "<group>"; };
 		CECC472F2AB2A4D3003942A0 /* house.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = house.mtl; sourceTree = "<group>"; };
 		CECC47302AB2A4D3003942A0 /* license.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = license.rtf; sourceTree = "<group>"; };
+		CECC47352AB2B10B003942A0 /* Terrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terrain.swift; sourceTree = "<group>"; };
+		CECC47372AB2B19B003942A0 /* Terrain.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Terrain.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 				CE0E12662AAF4CC300FFBDD2 /* Mesh.swift */,
 				CE0E12682AAF535400FFBDD2 /* Transform.swift */,
 				CE959A582AB0B1EA00BB40B8 /* Model.swift */,
+				CECC47352AB2B10B003942A0 /* Terrain.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				CE3F071C2AB20D5E00318C26 /* Lighting.metal */,
 				CE3F071E2AB211D600318C26 /* Vertex.h */,
 				CE3F071F2AB2133800318C26 /* Shaders.metal */,
+				CECC47372AB2B19B003942A0 /* Terrain.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -402,9 +408,11 @@
 				CE3F07102AB1FC5300318C26 /* BRDF.metal in Sources */,
 				CE0E12692AAF535400FFBDD2 /* Transform.swift in Sources */,
 				CE0E12652AAF3A9C00FFBDD2 /* MathUtility.swift in Sources */,
+				CECC47382AB2B19B003942A0 /* Terrain.metal in Sources */,
 				CE3F070B2AB1F57100318C26 /* SceneLighting.swift in Sources */,
 				CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */,
 				CE1CCA3F2AADF6430020BCD4 /* GameController.swift in Sources */,
+				CECC47362AB2B10B003942A0 /* Terrain.swift in Sources */,
 				CE1CCA3A2AADF3600020BCD4 /* MetalView.swift in Sources */,
 				CE959A572AB0AFE300BB40B8 /* PlayerCamera.swift in Sources */,
 				CE959A592AB0B1EA00BB40B8 /* Model.swift in Sources */,

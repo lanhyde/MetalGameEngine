@@ -8,10 +8,15 @@ struct GameScene {
   }
   var lighting = SceneLighting()
   let skybox: Skybox?
+  var terrain: Terrain?
   
   init() {
     skybox = Skybox(textureName: "sky")
     camera.transform = defaultView
+    
+    terrain = Terrain(name: "terrain.obj")
+    terrain?.tiling = 12
+    terrain?.position = [0, 3, 0]
   }
   
   mutating func update(size: CGSize) {
