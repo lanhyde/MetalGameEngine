@@ -11,6 +11,7 @@ class Renderer: NSObject {
   var params = Params()
   
   var forwardRenderPass: ForwardRenderPass
+  var shadowRenderPass: ShadowRenderPass
   var shadowCamera = OrthographicCamera()
   
   init(metalView: MTKView, options: Options) {
@@ -27,6 +28,7 @@ class Renderer: NSObject {
     Self.colorPixelFormat = metalView.colorPixelFormat
     self.options = options
     forwardRenderPass = ForwardRenderPass(view: metalView)
+    shadowRenderPass = ShadowRenderPass(view: metalView)
     super.init()
     
     metalView.clearColor = MTLClearColor(red: 0.93, green: 0.07, blue: 1.0, alpha: 1.0)
@@ -40,6 +42,7 @@ extension Renderer {
     params.width = UInt32(size.width)
     params.height = UInt32(size.height)
     forwardRenderPass.resize(view: view, size: size)
+    shadowRenderPass.resize(view: view, size: size)
   }
   
   func updateUniforms(scene: GameScene) {
@@ -60,7 +63,10 @@ extension Renderer {
           let descriptor = view.currentRenderPassDescriptor else { return }
     updateUniforms(scene: scene)
     
+    shadowRenderPass.draw(commandBuffer: commandBuffer, scene: scene, uniforms: uniforms, params: params)
+    
     forwardRenderPass.descriptor = descriptor
+    forwardRenderPass.shadowTexture = shadowRenderPass.shadowTexture
     forwardRenderPass.draw(commandBuffer: commandBuffer, scene: scene, uniforms: uniforms, params: params)
     guard let drawable = view.currentDrawable else { return }
     commandBuffer.present(drawable)

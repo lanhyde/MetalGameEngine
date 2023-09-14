@@ -42,6 +42,8 @@
 		CE3F07202AB2133800318C26 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE3F071F2AB2133800318C26 /* Shaders.metal */; };
 		CE720DB82AB3434F00904EBD /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE720DB72AB3434F00904EBD /* Water.swift */; };
 		CE720DBA2AB349E600904EBD /* Water.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE720DB92AB349E600904EBD /* Water.metal */; };
+		CE720DBC2AB34FC900904EBD /* ShadowRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE720DBB2AB34FC900904EBD /* ShadowRenderPass.swift */; };
+		CE720DBE2AB351B300904EBD /* Shadow.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE720DBD2AB351B300904EBD /* Shadow.metal */; };
 		CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A542AB0A43000BB40B8 /* Pipelines.swift */; };
 		CE959A572AB0AFE300BB40B8 /* PlayerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */; };
 		CE959A592AB0B1EA00BB40B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A582AB0B1EA00BB40B8 /* Model.swift */; };
@@ -97,6 +99,8 @@
 		CE3F071F2AB2133800318C26 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		CE720DB72AB3434F00904EBD /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
 		CE720DB92AB349E600904EBD /* Water.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Water.metal; sourceTree = "<group>"; };
+		CE720DBB2AB34FC900904EBD /* ShadowRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowRenderPass.swift; sourceTree = "<group>"; };
+		CE720DBD2AB351B300904EBD /* Shadow.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shadow.metal; sourceTree = "<group>"; };
 		CE959A542AB0A43000BB40B8 /* Pipelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipelines.swift; sourceTree = "<group>"; };
 		CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCamera.swift; sourceTree = "<group>"; };
 		CE959A582AB0B1EA00BB40B8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 				CE959A542AB0A43000BB40B8 /* Pipelines.swift */,
 				CE3F07082AB1F2CB00318C26 /* ForwardRenderPass.swift */,
 				CE3F070C2AB1F7B700318C26 /* Skybox.swift */,
+				CE720DBB2AB34FC900904EBD /* ShadowRenderPass.swift */,
 			);
 			path = "Render Passes";
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				CE3F071F2AB2133800318C26 /* Shaders.metal */,
 				CECC47372AB2B19B003942A0 /* Terrain.metal */,
 				CE720DB92AB349E600904EBD /* Water.metal */,
+				CE720DBD2AB351B300904EBD /* Shadow.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 				CE0E126B2AAF56D000FFBDD2 /* Camera.swift in Sources */,
 				CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */,
 				CE3F071D2AB20D5E00318C26 /* Lighting.metal in Sources */,
+				CE720DBE2AB351B300904EBD /* Shadow.metal in Sources */,
 				CE1CCA4A2AAE12AF0020BCD4 /* RenderPass.swift in Sources */,
 				CEC235E82AAEA3230016923C /* VertexDescriptor.swift in Sources */,
 				CE3F07072AB158BB00318C26 /* ShadowCamera.swift in Sources */,
@@ -426,6 +433,7 @@
 				CE0E12672AAF4CC300FFBDD2 /* Mesh.swift in Sources */,
 				CEC235E62AAE908C0016923C /* Submesh.swift in Sources */,
 				CE1CCA442AAE0AC40020BCD4 /* Settings.swift in Sources */,
+				CE720DBC2AB34FC900904EBD /* ShadowRenderPass.swift in Sources */,
 				CE0E12732AAF65AB00FFBDD2 /* OrthographicCamera.swift in Sources */,
 				CE0E12712AAF5B8D00FFBDD2 /* ArcballCamera.swift in Sources */,
 				CE1CCA2C2AADF0EC0020BCD4 /* ContentView.swift in Sources */,
