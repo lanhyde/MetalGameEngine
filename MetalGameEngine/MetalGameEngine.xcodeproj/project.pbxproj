@@ -45,6 +45,10 @@
 		CE959A592AB0B1EA00BB40B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A582AB0B1EA00BB40B8 /* Model.swift */; };
 		CEC235E62AAE908C0016923C /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC235E52AAE908C0016923C /* Submesh.swift */; };
 		CEC235E82AAEA3230016923C /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC235E72AAEA3230016923C /* VertexDescriptor.swift */; };
+		CECC47312AB2A4DC003942A0 /* terrain.obj in Resources */ = {isa = PBXBuildFile; fileRef = CECC472A2AB2A4D3003942A0 /* terrain.obj */; };
+		CECC47322AB2A4DF003942A0 /* terrain.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CECC472B2AB2A4D3003942A0 /* terrain.mtl */; };
+		CECC47332AB2A4F0003942A0 /* house.obj in Resources */ = {isa = PBXBuildFile; fileRef = CECC472E2AB2A4D3003942A0 /* house.obj */; };
+		CECC47342AB2A4F4003942A0 /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CECC472F2AB2A4D3003942A0 /* house.mtl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,12 @@
 		CE959A582AB0B1EA00BB40B8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CEC235E52AAE908C0016923C /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		CEC235E72AAEA3230016923C /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
+		CECC472A2AB2A4D3003942A0 /* terrain.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = terrain.obj; sourceTree = "<group>"; };
+		CECC472B2AB2A4D3003942A0 /* terrain.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = terrain.mtl; sourceTree = "<group>"; };
+		CECC472C2AB2A4D3003942A0 /* license.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = license.rtf; sourceTree = "<group>"; };
+		CECC472E2AB2A4D3003942A0 /* house.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = house.obj; sourceTree = "<group>"; };
+		CECC472F2AB2A4D3003942A0 /* house.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = house.mtl; sourceTree = "<group>"; };
+		CECC47302AB2A4D3003942A0 /* license.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = license.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +262,7 @@
 		CE1CCA532AAE22490020BCD4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CECC47282AB2A4D3003942A0 /* Models */,
 				CE3F07152AB2088800318C26 /* irradiance.png */,
 				CE3F07132AB2085C00318C26 /* Textures.xcassets */,
 			);
@@ -265,6 +276,35 @@
 				CE3F07112AB1FC9400318C26 /* RendererBRDF.swift */,
 			);
 			path = BRDF;
+			sourceTree = "<group>";
+		};
+		CECC47282AB2A4D3003942A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CECC47292AB2A4D3003942A0 /* Terrain */,
+				CECC472D2AB2A4D3003942A0 /* House */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CECC47292AB2A4D3003942A0 /* Terrain */ = {
+			isa = PBXGroup;
+			children = (
+				CECC472A2AB2A4D3003942A0 /* terrain.obj */,
+				CECC472B2AB2A4D3003942A0 /* terrain.mtl */,
+				CECC472C2AB2A4D3003942A0 /* license.rtf */,
+			);
+			path = Terrain;
+			sourceTree = "<group>";
+		};
+		CECC472D2AB2A4D3003942A0 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				CECC472E2AB2A4D3003942A0 /* house.obj */,
+				CECC472F2AB2A4D3003942A0 /* house.mtl */,
+				CECC47302AB2A4D3003942A0 /* license.rtf */,
+			);
+			path = House;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,10 +365,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECC47342AB2A4F4003942A0 /* house.mtl in Resources */,
 				CE3F07142AB2085C00318C26 /* Textures.xcassets in Resources */,
+				CECC47312AB2A4DC003942A0 /* terrain.obj in Resources */,
 				CE1CCA322AADF0EE0020BCD4 /* Preview Assets.xcassets in Resources */,
 				CE1CCA2E2AADF0EE0020BCD4 /* Assets.xcassets in Resources */,
 				CE3F07162AB2089000318C26 /* irradiance.png in Resources */,
+				CECC47332AB2A4F0003942A0 /* house.obj in Resources */,
+				CECC47322AB2A4DF003942A0 /* terrain.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
