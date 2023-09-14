@@ -9,7 +9,7 @@ class InputController {
   }
   
   static let shared = InputController()
-  var keyPressed: Set<GCKeyCode> = []
+  var keysPressed: Set<GCKeyCode> = []
   var leftMouseDown = false
   var mouseDelta = Point.zero
   var mouseScroll = Point.zero
@@ -26,6 +26,18 @@ class InputController {
   
   private init() {
     let center = NotificationCenter.default
+    center.addObserver(forName: .GCKeyboardDidConnect, object: nil, queue: nil) {
+      notification in
+      let keyboard = notification.object as? GCKeyboard
+      keyboard?.keyboardInput?.keyChangedHandler = {
+        _, _, keyCode, pressed in
+        if pressed {
+          self.keysPressed.insert(keyCode)
+        } else {
+          self.keysPressed.remove(keyCode)
+        }
+      }
+    }
     center.addObserver(forName: .GCKeyboardDidConnect, object: nil, queue: nil) {
       notification in
       let mouse = notification.object as? GCMouse

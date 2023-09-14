@@ -14,23 +14,23 @@ extension Movement {
     let input = InputController.shared
     var transform = Transform()
     let rotationAmount = deltaTime * Settings.rotationSpeed
-    if input.keyPressed.contains(.leftArrow) {
+    if input.keysPressed.contains(.leftArrow) {
       transform.rotation.y -= rotationAmount
     }
-    if input.keyPressed.contains(.rightArrow) {
+    if input.keysPressed.contains(.rightArrow) {
       transform.rotation.y += rotationAmount
     }
     var direction: float3 = .zero
-    if input.keyPressed.contains(.keyW) {
+    if input.keysPressed.contains(.keyW) {
       direction.z += 1
     }
-    if input.keyPressed.contains(.keyS) {
+    if input.keysPressed.contains(.keyS) {
       direction.z -= 1
     }
-    if input.keyPressed.contains(.keyA) {
+    if input.keysPressed.contains(.keyA) {
       direction.x -= 1
     }
-    if input.keyPressed.contains(.keyD) {
+    if input.keysPressed.contains(.keyD) {
       direction.x += 1
     }
     let translationAmount = deltaTime * Settings.translationSpeed

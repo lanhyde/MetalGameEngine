@@ -26,13 +26,13 @@ struct GameScene {
   mutating func update(deltaTime: Float) {
     let input = InputController.shared
     
-    if input.keyPressed.contains(.one) {
+    if input.keysPressed.contains(.one) {
       camera.transform = Transform()
-      input.keyPressed.remove(.one)
+      input.keysPressed.remove(.one)
     }
-    if input.keyPressed.contains(.two) {
+    if input.keysPressed.contains(.two) {
       camera.transform = defaultView
-      input.keyPressed.remove(.two)
+      input.keysPressed.remove(.two)
     }
     
     let positionYDelta = (input.mouseScroll.x + input.mouseScroll.y) * Settings.mouseScrollSensitivity
