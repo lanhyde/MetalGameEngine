@@ -9,7 +9,7 @@ struct PlayerCamera: Camera, Movement {
   var far: Float = 100
   
   var projectionMatrix: float4x4 {
-    float4x4(projecctionFov: fov, near: near, far: far, aspect: aspect)
+    float4x4(projectionFov: fov, near: near, far: far, aspect: aspect)
   }
   
   var viewMatrix: float4x4 {
@@ -24,7 +24,7 @@ struct PlayerCamera: Camera, Movement {
   mutating func update(deltaTime: Float) {
     let transform = updateInput(deltaTime: deltaTime)
     rotation += transform.rotation
-    position += transform.rotation
+    position += transform.position
     let input = InputController.shared
     if input.leftMouseDown {
       let sensitivity = Settings.mousePanSensitivity

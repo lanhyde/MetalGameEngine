@@ -9,7 +9,7 @@ struct ArcballCamera: Camera {
   var near: Float = 0.1
   var far: Float = 100
   var projectionMatrix: float4x4 {
-    float4x4(projecctionFov: fov, near: near, far: far, aspect: aspect)
+    float4x4(projectionFov: fov, near: near, far: far, aspect: aspect)
   }
   
   let minDistance: Float = 0.01
