@@ -100,7 +100,7 @@ enum PipelineStates {
     attachment?.isBlendingEnabled = true
     attachment?.rgbBlendOperation = .add
     attachment?.sourceRGBBlendFactor = .sourceAlpha
-    attachment?.destinationAlphaBlendFactor = .oneMinusSourceAlpha
+    attachment?.destinationRGBBlendFactor = .oneMinusSourceAlpha
     
     pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float
     pipelineDescriptor.vertexDescriptor = vertexDescriptor
