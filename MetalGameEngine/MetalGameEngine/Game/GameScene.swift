@@ -15,6 +15,7 @@ struct GameScene {
   init() {
     skybox = Skybox(textureName: "sky")
     water = Water()
+    water?.position = [0, -1, 0]
     
     terrain = Terrain(name: "terrain.obj")
     terrain?.tiling = 12
@@ -23,7 +24,6 @@ struct GameScene {
     
     camera.transform = defaultView
     
-    water?.position = [0, -1, 0]
     cottage.position = [0, 0.4, 10]
     cottage.rotation.y = 0.2
     models = [cottage]

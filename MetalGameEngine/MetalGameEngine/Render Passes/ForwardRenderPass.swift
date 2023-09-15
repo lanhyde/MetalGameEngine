@@ -37,8 +37,8 @@ struct ForwardRenderPass: RenderPass {
       model.render(encoder: renderEncoder, uniforms: uniforms, params: params)
     }
     scene.terrain?.render(encoder: renderEncoder, uniforms: uniforms, params: params)
-    scene.skybox?.render(renderEncoder: renderEncoder, uniforms: uniforms)
     scene.water?.render(encoder: renderEncoder, uniforms: uniforms, params: params)
+    scene.skybox?.render(renderEncoder: renderEncoder, uniforms: uniforms)
     renderEncoder.endEncoding()
   }
 }

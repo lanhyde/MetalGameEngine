@@ -5,6 +5,11 @@ class Water: Transformable {
   var transform = Transform()
   let pipelineState: MTLRenderPipelineState
   var timer: Float = 0
+  var waterMovementTexture: MTLTexture?
+  
+  weak var reflectionTexture: MTLTexture?
+  weak var refractionTexture: MTLTexture?
+  weak var refractionDepthTexture: MTLTexture?
   
   init() {
     let allocator = MTKMeshBufferAllocator(device: Renderer.device)
@@ -33,6 +38,10 @@ class Water: Transformable {
     var params = params
     encoder.setVertexBytes(&params, length: MemoryLayout<Params>.stride, index: ParamsBuffer.index)
     
+    encoder.setFragmentTexture(reflectionTexture, index: 0)
+    encoder.setFragmentTexture(refractionTexture, index: 1)
+    encoder.setFragmentTexture(waterMovementTexture, index: 2)
+    encoder.setFragmentTexture(refractionDepthTexture, index: 3)
     var timer = timer
     encoder.setFragmentBytes(&timer, length: MemoryLayout<Float>.size, index: 3)
     

@@ -44,6 +44,7 @@
 		CE720DBA2AB349E600904EBD /* Water.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE720DB92AB349E600904EBD /* Water.metal */; };
 		CE720DBC2AB34FC900904EBD /* ShadowRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE720DBB2AB34FC900904EBD /* ShadowRenderPass.swift */; };
 		CE720DBE2AB351B300904EBD /* Shadow.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE720DBD2AB351B300904EBD /* Shadow.metal */; };
+		CE720DC02AB3621100904EBD /* WaterRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE720DBF2AB3621100904EBD /* WaterRenderPass.swift */; };
 		CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A542AB0A43000BB40B8 /* Pipelines.swift */; };
 		CE959A572AB0AFE300BB40B8 /* PlayerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */; };
 		CE959A592AB0B1EA00BB40B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A582AB0B1EA00BB40B8 /* Model.swift */; };
@@ -101,6 +102,7 @@
 		CE720DB92AB349E600904EBD /* Water.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Water.metal; sourceTree = "<group>"; };
 		CE720DBB2AB34FC900904EBD /* ShadowRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowRenderPass.swift; sourceTree = "<group>"; };
 		CE720DBD2AB351B300904EBD /* Shadow.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shadow.metal; sourceTree = "<group>"; };
+		CE720DBF2AB3621100904EBD /* WaterRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRenderPass.swift; sourceTree = "<group>"; };
 		CE959A542AB0A43000BB40B8 /* Pipelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipelines.swift; sourceTree = "<group>"; };
 		CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCamera.swift; sourceTree = "<group>"; };
 		CE959A582AB0B1EA00BB40B8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				CE3F07082AB1F2CB00318C26 /* ForwardRenderPass.swift */,
 				CE3F070C2AB1F7B700318C26 /* Skybox.swift */,
 				CE720DBB2AB34FC900904EBD /* ShadowRenderPass.swift */,
+				CE720DBF2AB3621100904EBD /* WaterRenderPass.swift */,
 			);
 			path = "Render Passes";
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE720DC02AB3621100904EBD /* WaterRenderPass.swift in Sources */,
 				CE1CCA422AAE018E0020BCD4 /* InputController.swift in Sources */,
 				CE3F071A2AB20BA400318C26 /* IBL.metal in Sources */,
 				CE1CCA3C2AADF4640020BCD4 /* Options.swift in Sources */,
