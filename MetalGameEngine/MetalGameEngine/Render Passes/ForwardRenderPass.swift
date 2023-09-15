@@ -39,6 +39,19 @@ struct ForwardRenderPass: RenderPass {
     scene.terrain?.render(encoder: renderEncoder, uniforms: uniforms, params: params)
     scene.water?.render(encoder: renderEncoder, uniforms: uniforms, params: params)
     scene.skybox?.render(renderEncoder: renderEncoder, uniforms: uniforms)
+    
+    renderEncoder.pushDebugGroup("Transparency")
+    let models = scene.models.filter {
+      $0.hasTransparency
+    }
+    params.transparency = true
+    if params.alphaBlending {
+      renderEncoder.setRenderPipelineState(transparentPSO)
+    }
+    for model in models {
+      model.render(encoder: renderEncoder, uniforms: uniforms, params: params)
+    }
+    renderEncoder.popDebugGroup()
     renderEncoder.endEncoding()
   }
 }

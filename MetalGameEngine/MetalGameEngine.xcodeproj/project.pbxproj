@@ -56,6 +56,7 @@
 		CECC47342AB2A4F4003942A0 /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = CECC472F2AB2A4D3003942A0 /* house.mtl */; };
 		CECC47362AB2B10B003942A0 /* Terrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC47352AB2B10B003942A0 /* Terrain.swift */; };
 		CECC47382AB2B19B003942A0 /* Terrain.metal in Sources */ = {isa = PBXBuildFile; fileRef = CECC47372AB2B19B003942A0 /* Terrain.metal */; };
+		CED7510F2AB4642900920437 /* PBR.metal in Sources */ = {isa = PBXBuildFile; fileRef = CED7510E2AB4642900920437 /* PBR.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		CECC47302AB2A4D3003942A0 /* license.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = license.rtf; sourceTree = "<group>"; };
 		CECC47352AB2B10B003942A0 /* Terrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terrain.swift; sourceTree = "<group>"; };
 		CECC47372AB2B19B003942A0 /* Terrain.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Terrain.metal; sourceTree = "<group>"; };
+		CED7510E2AB4642900920437 /* PBR.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PBR.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				CECC47372AB2B19B003942A0 /* Terrain.metal */,
 				CE720DB92AB349E600904EBD /* Water.metal */,
 				CE720DBD2AB351B300904EBD /* Shadow.metal */,
+				CED7510E2AB4642900920437 /* PBR.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				CEC235E62AAE908C0016923C /* Submesh.swift in Sources */,
 				CE1CCA442AAE0AC40020BCD4 /* Settings.swift in Sources */,
 				CE720DBC2AB34FC900904EBD /* ShadowRenderPass.swift in Sources */,
+				CED7510F2AB4642900920437 /* PBR.metal in Sources */,
 				CE0E12732AAF65AB00FFBDD2 /* OrthographicCamera.swift in Sources */,
 				CE0E12712AAF5B8D00FFBDD2 /* ArcballCamera.swift in Sources */,
 				CE1CCA2C2AADF0EC0020BCD4 /* ContentView.swift in Sources */,

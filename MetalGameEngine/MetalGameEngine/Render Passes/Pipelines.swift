@@ -59,7 +59,7 @@ enum PipelineStates {
     attachment?.destinationRGBBlendFactor = .oneMinusSourceAlpha
     
     pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float
-    pipelineDescriptor.vertexDescriptor = .defaultLayout
+    pipelineDescriptor.vertexDescriptor = MTLVertexDescriptor.defaultLayout
     
     return createPSO(descriptor: pipelineDescriptor)
   }

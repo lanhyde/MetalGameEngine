@@ -27,7 +27,7 @@ class Model: Transformable {
     }
     self.name = name
     hasTransparency = meshes.contains { mesh in
-      mesh.submeshes.contains { $0.transparenccy }
+      mesh.submeshes.contains { $0.transparency }
     }
   }
   
@@ -35,7 +35,7 @@ class Model: Transformable {
     encoder.pushDebugGroup(name)
     var uniforms = vertex
     uniforms.modelMatrix = transform.modelMatrix
-    uniforms.normalMatrix = transform.modelMatrix.upperLeft
+    uniforms.normalMatrix = uniforms.modelMatrix.upperLeft
     var params = fragment
     params.tiling = tiling
     
@@ -48,7 +48,7 @@ class Model: Transformable {
       }
       
       for submesh in mesh.submeshes {
-        if submesh.transparenccy != params.transparency { continue }
+        if submesh.transparency != params.transparency { continue }
         encoder.setFragmentTexture(submesh.textures.baseColor, index: BaseColor.index)
         encoder.setFragmentTexture(submesh.textures.normal, index: NormalTexture.index)
         encoder.setFragmentTexture(submesh.textures.roughness, index: RoughnessTexture.index)

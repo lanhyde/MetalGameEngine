@@ -18,7 +18,7 @@ struct Submesh {
   let textures: Textures
   let material: Material
   
-  var transparenccy: Bool {
+  var transparency: Bool {
     return textures.opacity != nil || material.opacity < 1.0
   }
 }

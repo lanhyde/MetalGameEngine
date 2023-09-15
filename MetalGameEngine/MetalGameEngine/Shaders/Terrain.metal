@@ -7,12 +7,20 @@ using namespace metal;
 fragment float4 fragment_terrain(FragmentIn in [[stage_in]], constant Params& params [[buffer(ParamsBuffer)]],
                                  constant Light* lights [[buffer(LightBuffer)]],
                                  depth2d<float> shadowTexture [[texture(ShadowTexture)]],
-                                 texture2d<float> baseColor [[texture(BaseColor)]]) {
+                                 texture2d<float> baseColor [[texture(BaseColor)]],
+                                 texture2d<float> underwaterTexture [[texture(MiscTexture)]]) {
   const sampler default_sampler(filter::linear, address::repeat);
   float4 color;
   float4 grass = baseColor.sample(default_sampler, in.uv * params.tiling);
   color = grass;
   
+  float4 underwater = underwaterTexture.sample(default_sampler, in.uv * params.tiling);
+  float lower = -1.3;
+  float upper = 0.2;
+  float y = in.worldPosition.y;
+  float waterHeight = (upper - y) / (upper - lower);
+  in.worldPosition.y < lower ?
+  (color = underwater) : (in.worldPosition.y > upper ? (color = grass) : (color = mix(grass, underwater, waterHeight)));
   
   float3 normal = normalize(in.worldNormal);
   Light light = lights[0];
