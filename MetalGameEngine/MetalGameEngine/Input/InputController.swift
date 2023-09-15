@@ -38,7 +38,7 @@ class InputController {
         }
       }
     }
-    center.addObserver(forName: .GCKeyboardDidConnect, object: nil, queue: nil) {
+    center.addObserver(forName: .GCMouseDidConnect, object: nil, queue: nil) {
       notification in
       let mouse = notification.object as? GCMouse
       mouse?.mouseInput?.leftButton.pressedChangedHandler = { _, _, pressed in
