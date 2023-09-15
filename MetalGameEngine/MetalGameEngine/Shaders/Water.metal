@@ -15,7 +15,7 @@ struct VertexOut {
 };
 
 vertex VertexOut vertex_water(const VertexIn in [[stage_in]], constant Uniforms& uniforms [[buffer(UniformsBuffer)]]) {
-  float4x4 mvp = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.viewMatrix;
+  float4x4 mvp = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix;
   VertexOut out {
     .position = mvp * in.position,
     .worldPosition = uniforms.modelMatrix * in.position,
