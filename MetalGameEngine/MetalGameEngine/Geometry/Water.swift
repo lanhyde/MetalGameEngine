@@ -20,6 +20,7 @@ class Water: Transformable {
       fatalError("failed to create water plane")
     }
     pipelineState = PipelineStates.createWaterPSO(vertexDescriptor: MTKMetalVertexDescriptorFromModelIO(mesh.vertexDescriptor))
+    waterMovementTexture = try? TextureController.loadTexture(filename: "normal-water")
   }
   
   func update(deltaTime: Float) {
