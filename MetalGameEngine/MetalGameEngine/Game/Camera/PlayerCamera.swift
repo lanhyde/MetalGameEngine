@@ -5,7 +5,7 @@ struct PlayerCamera: Camera, Movement {
   
   var aspect: Float = 1.0
   var fov = Float(70).degreesToRadians
-  var near: Float = 1.0
+  var near: Float = 0.1
   var far: Float = 100
   
   var projectionMatrix: float4x4 {
