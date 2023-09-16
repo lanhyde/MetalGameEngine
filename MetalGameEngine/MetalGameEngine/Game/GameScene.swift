@@ -12,6 +12,7 @@ struct GameScene {
   var cottage: Model
   var water: Water?
   
+  var swan: Model
   init() {
     skybox = Skybox(textureName: "sky")
     water = Water()
@@ -21,12 +22,13 @@ struct GameScene {
     terrain?.tiling = 12
     terrain?.position = [0, 3, 0]
     cottage = Model(name: "house.obj")
-    
+    swan = Model(name: "swan.obj")
     camera.transform = defaultView
     
     cottage.position = [0, 0.4, 10]
+    swan.position = [0, -1.05, 35]
     cottage.rotation.y = 0.2
-    models = [cottage]
+    models = [cottage, swan]
   }
   
   mutating func update(size: CGSize) {
