@@ -4,6 +4,7 @@ import CoreGraphics
 typealias float2 = SIMD2<Float>
 typealias float3 = SIMD3<Float>
 typealias float4 = SIMD4<Float>
+typealias quaternion = simd_quatf
 
 extension Float {
   var radiansToDegrees: Float {
@@ -183,3 +184,82 @@ extension float4 {
   }
 }
 
+extension quaternion {
+  static var identity: quaternion {
+    simd_quatf(ix: 0, iy: 0, iz: 0, r: 1)
+  }
+  // yaw(z), pitch(y), roll(x)
+  init(x: Float, y: Float, z: Float) {
+    self = quaternion.euler(x: x, y: y, z:z)
+  }
+  
+  static func euler(x: Float, y: Float, z: Float) -> quaternion {
+    let yaw = z
+    let pitch = y
+    let roll = x
+    
+    let cy = cos(yaw * 0.5)
+    let sy = sin(yaw * 0.5)
+    let cp = cos(pitch * 0.5)
+    let sp = sin(pitch * 0.5)
+    let cr = cos(roll * 0.5)
+    let sr = sin(roll * 0.5)
+    
+    var q = quaternion()
+    let w = cr * cp * cy + sr * sp * sy
+    let x = sr * cp * cy - cr * sp * sy
+    let y = cr * sp * cy + sr * cp * sy
+    let z = cr * cp * sy - sr * sp * cy
+    q.vector = float4(x: x, y: y, z: z, w: w)
+    return q
+  }
+  
+  var toEuler: float3 {
+    var angles = float3()
+    // x-axis rotation
+    let sinr_cosp = 2 * (self.vector.w * self.vector.x + self.vector.y * self.vector.z)
+    let cosr_cosp = 1 - 2 * (self.vector.x * self.vector.x + self.vector.y * self.vector.y)
+    angles.x = atan2f(sinr_cosp, cosr_cosp)
+    // y-axis rotation
+    let sinp = 2 * (self.vector.w * self.vector.y - self.vector.z * self.vector.x)
+    if abs(sinp) >= 1 {
+      angles.y = copysignf(.pi / 2, sinp)
+    } else {
+      angles.y = asinf(sinp)
+    }
+    // z-axis rotation
+    let siny_cosp = 2 * (self.vector.w * self.vector.z + self.vector.x * self.vector.y)
+    let cosy_cosp = 1 - 2 * (self.vector.y * self.vector.y + self.vector.z * self.vector.z)
+    angles.z = atan2f(siny_cosp, cosy_cosp)
+    
+    return angles
+  }
+  
+  static func slerp(from quatA: quaternion, to quatB: quaternion, t: Float) -> quaternion {
+    var qm = quaternion()
+    let cosHalfTheta = quatA.vector.w * quatB.vector.w + quatA.vector.x * quatB.vector.x + quatA.vector.y * quatB.vector.y
+    + quatA.vector.z * quatB.vector.z
+    if abs(cosHalfTheta) >= 1.0 {
+      qm.vector = quatA.vector
+      return qm
+    }
+    let halfTheta = acosf(cosHalfTheta)
+    let sinHalfTheta = sqrtf(1.0 - cosHalfTheta * cosHalfTheta)
+    if abs(sinHalfTheta) < 0.001 {
+      qm.vector.w = quatA.vector.w * 0.5 + quatB.vector.w * 0.5
+      qm.vector.x = quatA.vector.x * 0.5 + quatB.vector.x * 0.5
+      qm.vector.y = quatA.vector.y * 0.5 + quatB.vector.y * 0.5
+      qm.vector.z = quatA.vector.z * 0.5 + quatB.vector.z * 0.5
+      return qm
+    }
+    let ratioA = sinf((1 - t) * halfTheta) / sinHalfTheta
+    let ratioB = sinf(t * halfTheta) / sinHalfTheta
+    
+    qm.vector.w = quatA.vector.w * ratioA + quatB.vector.w * ratioB
+    qm.vector.x = quatA.vector.x * ratioA + quatB.vector.x * ratioB
+    qm.vector.y = quatA.vector.y * ratioA + quatB.vector.y * ratioB
+    qm.vector.z = quatA.vector.z * ratioA + quatB.vector.z * ratioB
+    
+    return qm
+  }
+}

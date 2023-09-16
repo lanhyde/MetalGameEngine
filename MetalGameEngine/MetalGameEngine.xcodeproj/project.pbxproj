@@ -154,6 +154,7 @@
 		CE1CCA282AADF0EC0020BCD4 /* MetalGameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				CEEFA1382AB6127A006124C5 /* AI */,
 				CE1CCA532AAE22490020BCD4 /* Resources */,
 				CE1CCA522AAE22340020BCD4 /* Textures */,
 				CE1CCA4D2AAE13D60020BCD4 /* Shaders */,
@@ -343,6 +344,21 @@
 				CEEFA1352AB60D00006124C5 /* swan.obj */,
 			);
 			path = Swan;
+			sourceTree = "<group>";
+		};
+		CEEFA1382AB6127A006124C5 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFA1392AB612F4006124C5 /* Steering */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		CEEFA1392AB612F4006124C5 /* Steering */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Steering;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
