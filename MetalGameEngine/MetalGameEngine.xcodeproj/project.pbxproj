@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE074BC52AB86B3C000CB3D4 /* WanderSteering.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE074BC42AB86B3C000CB3D4 /* WanderSteering.swift */; };
 		CE0E12652AAF3A9C00FFBDD2 /* MathUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E12642AAF3A9C00FFBDD2 /* MathUtility.swift */; };
 		CE0E12672AAF4CC300FFBDD2 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E12662AAF4CC300FFBDD2 /* Mesh.swift */; };
 		CE0E12692AAF535400FFBDD2 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E12682AAF535400FFBDD2 /* Transform.swift */; };
@@ -45,6 +46,8 @@
 		CE720DBC2AB34FC900904EBD /* ShadowRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE720DBB2AB34FC900904EBD /* ShadowRenderPass.swift */; };
 		CE720DBE2AB351B300904EBD /* Shadow.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE720DBD2AB351B300904EBD /* Shadow.metal */; };
 		CE720DC02AB3621100904EBD /* WaterRenderPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE720DBF2AB3621100904EBD /* WaterRenderPass.swift */; };
+		CE85369B2AB709AC00C7E7D9 /* Steering.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85369A2AB709AC00C7E7D9 /* Steering.swift */; };
+		CE85369F2AB749BD00C7E7D9 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE85369E2AB749BD00C7E7D9 /* Actor.swift */; };
 		CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A542AB0A43000BB40B8 /* Pipelines.swift */; };
 		CE959A572AB0AFE300BB40B8 /* PlayerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */; };
 		CE959A592AB0B1EA00BB40B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE959A582AB0B1EA00BB40B8 /* Model.swift */; };
@@ -62,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE074BC42AB86B3C000CB3D4 /* WanderSteering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderSteering.swift; sourceTree = "<group>"; };
 		CE0E12642AAF3A9C00FFBDD2 /* MathUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtility.swift; sourceTree = "<group>"; };
 		CE0E12662AAF4CC300FFBDD2 /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
 		CE0E12682AAF535400FFBDD2 /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 		CE720DBB2AB34FC900904EBD /* ShadowRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowRenderPass.swift; sourceTree = "<group>"; };
 		CE720DBD2AB351B300904EBD /* Shadow.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shadow.metal; sourceTree = "<group>"; };
 		CE720DBF2AB3621100904EBD /* WaterRenderPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRenderPass.swift; sourceTree = "<group>"; };
+		CE85369A2AB709AC00C7E7D9 /* Steering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steering.swift; sourceTree = "<group>"; };
+		CE85369E2AB749BD00C7E7D9 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		CE959A542AB0A43000BB40B8 /* Pipelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipelines.swift; sourceTree = "<group>"; };
 		CE959A562AB0AFE300BB40B8 /* PlayerCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCamera.swift; sourceTree = "<group>"; };
 		CE959A582AB0B1EA00BB40B8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -350,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				CEEFA1392AB612F4006124C5 /* Steering */,
+				CE85369E2AB749BD00C7E7D9 /* Actor.swift */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -357,6 +364,8 @@
 		CEEFA1392AB612F4006124C5 /* Steering */ = {
 			isa = PBXGroup;
 			children = (
+				CE85369A2AB709AC00C7E7D9 /* Steering.swift */,
+				CE074BC42AB86B3C000CB3D4 /* WanderSteering.swift */,
 			);
 			path = Steering;
 			sourceTree = "<group>";
@@ -447,6 +456,7 @@
 				CE3F07202AB2133800318C26 /* Shaders.metal in Sources */,
 				CE0E126F2AAF5B7000FFBDD2 /* FPCamera.swift in Sources */,
 				CE0E126D2AAF585C00FFBDD2 /* Movement.swift in Sources */,
+				CE85369F2AB749BD00C7E7D9 /* Actor.swift in Sources */,
 				CE3F07182AB2097100318C26 /* Skybox.metal in Sources */,
 				CE0E126B2AAF56D000FFBDD2 /* Camera.swift in Sources */,
 				CE1CCA552AAE22540020BCD4 /* TextureController.swift in Sources */,
@@ -460,10 +470,12 @@
 				CE3F07102AB1FC5300318C26 /* BRDF.metal in Sources */,
 				CE0E12692AAF535400FFBDD2 /* Transform.swift in Sources */,
 				CE0E12652AAF3A9C00FFBDD2 /* MathUtility.swift in Sources */,
+				CE85369B2AB709AC00C7E7D9 /* Steering.swift in Sources */,
 				CECC47382AB2B19B003942A0 /* Terrain.metal in Sources */,
 				CE3F070B2AB1F57100318C26 /* SceneLighting.swift in Sources */,
 				CE959A552AB0A43000BB40B8 /* Pipelines.swift in Sources */,
 				CE720DB82AB3434F00904EBD /* Water.swift in Sources */,
+				CE074BC52AB86B3C000CB3D4 /* WanderSteering.swift in Sources */,
 				CE1CCA3F2AADF6430020BCD4 /* GameController.swift in Sources */,
 				CECC47362AB2B10B003942A0 /* Terrain.swift in Sources */,
 				CE1CCA3A2AADF3600020BCD4 /* MetalView.swift in Sources */,

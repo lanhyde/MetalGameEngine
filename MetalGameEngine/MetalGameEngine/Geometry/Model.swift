@@ -31,6 +31,8 @@ class Model: Transformable {
     }
   }
   
+  func update(deltaTime: Float) { }
+  
   func render(encoder: MTLRenderCommandEncoder, uniforms vertex: Uniforms, params fragment: Params) {
     encoder.pushDebugGroup(name)
     var uniforms = vertex

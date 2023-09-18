@@ -19,6 +19,24 @@ extension Float {
   }
 }
 
+extension float3 {
+  static func clampMagnitude(_ vec: float3, max threshold: Float) -> float3 {
+    if simd_length(vec) <= threshold {
+      return vec
+    }
+    let unitVec = normalize(vec)
+    return unitVec * threshold
+  }
+  static func slerp(from start: float3, to end: float3, _ percent: Float) -> float3 {
+    var prod = simd_dot(start, end)
+    prod = prod.clamp(lowerBound: -1.0, upperBound: 1.0)
+    let theta = acos(prod) * percent
+    var relativeVec = end - start * prod
+    relativeVec = normalize(relativeVec)
+    
+    return start * cos(theta) + relativeVec * sin(theta)
+  }
+}
 extension float4x4 {
   init(translation: float3) {
     let matrix = float4x4(
@@ -239,6 +257,7 @@ extension quaternion {
     var qm = quaternion()
     let cosHalfTheta = quatA.vector.w * quatB.vector.w + quatA.vector.x * quatB.vector.x + quatA.vector.y * quatB.vector.y
     + quatA.vector.z * quatB.vector.z
+    
     if abs(cosHalfTheta) >= 1.0 {
       qm.vector = quatA.vector
       return qm
