@@ -26,9 +26,9 @@ class WanderSteering: Steering {
   }
   
   init(actor: Actor, weight: Float = 1) {
-    wanderRadius = 3
-    wanderDistance = 5
-    wanderJitter = 0.2
+    wanderRadius = 10
+    wanderDistance = 20
+    wanderJitter = 0.5
     desiredVelocity = .zero
     isEnabled = true
     self.weight = weight
@@ -38,6 +38,4 @@ class WanderSteering: Steering {
     circleTarget = float3(wanderRadius * 0.707, 0, wanderRadius * 0.707)
     wanderTarget = .zero
   }
-  
-  
 }

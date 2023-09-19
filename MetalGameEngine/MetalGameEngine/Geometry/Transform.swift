@@ -21,6 +21,13 @@ protocol Transformable {
 }
 
 extension Transformable {
+  var forward: float3 {
+    normalize([sin(rotation.y), 0, cos(rotation.y)])
+  }
+  var right: float3 {
+    [forward.z, forward.y, -forward.x]
+  }
+  
   var position: float3 {
     get { transform.position }
     set { transform.position = newValue }

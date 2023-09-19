@@ -3,13 +3,6 @@ import Foundation
 protocol Movement where Self: Transformable { }
 
 extension Movement {
-  var forward: float3 {
-    normalize([sin(rotation.y), 0, cos(rotation.y)])
-  }
-  var right: float3 {
-    [forward.z, forward.y, -forward.x]
-  }
-  
   func updateInput(deltaTime: Float) -> Transform {
     let input = InputController.shared
     var transform = Transform()

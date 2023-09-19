@@ -243,7 +243,7 @@ extension quaternion {
     if abs(sinp) >= 1 {
       angles.y = copysignf(.pi / 2, sinp)
     } else {
-      angles.y = asinf(sinp)
+      angles.y = asin(sinp)
     }
     // z-axis rotation
     let siny_cosp = 2 * (self.vector.w * self.vector.z + self.vector.x * self.vector.y)

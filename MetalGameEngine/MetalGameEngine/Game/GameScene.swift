@@ -12,7 +12,7 @@ struct GameScene {
   var cottage: Model
   var water: Water?
   
-  var swan: Model
+  var swan: Actor
   init() {
     skybox = Skybox(textureName: "sky")
     water = Water()
@@ -22,13 +22,16 @@ struct GameScene {
     terrain?.tiling = 12
     terrain?.position = [0, 3, 0]
     cottage = Model(name: "house.obj")
-    swan = Model(name: "swan.obj")
+    swan = Actor(name: "swan.obj")
     camera.transform = defaultView
     
     cottage.position = [0, 0.4, 10]
-    swan.position = [0, -1.05, 35]
+    swan.position = [0, -1, 25]
     cottage.rotation.y = 0.2
     models = [cottage, swan]
+    
+    swan.velocity = float3(0.001, 0, 0.001)
+    swan.appendSteering(WanderSteering(actor: swan))
   }
   
   mutating func update(size: CGSize) {
@@ -37,6 +40,7 @@ struct GameScene {
   
   mutating func update(deltaTime: Float) {
     water?.update(deltaTime: deltaTime)
+    swan.update(deltaTime: deltaTime)
     let input = InputController.shared
     
     if input.keysPressed.contains(.one) {
